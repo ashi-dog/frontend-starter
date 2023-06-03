@@ -1,0 +1,6 @@
+.gitignore
+.eslintignore
+.next
+dist
+node_modules
+.yarn
