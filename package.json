@@ -2,8 +2,8 @@
     "name": "frontend-starter",
     "private": true,
     "version": "0.0.0",
-    "type": "module",
     "scripts": {
+        "i18n:update": "node __generator__/__genI18nFile.js",
         "dev": "cp .env.base.local .env.local && vite",
         "build": "tsc && vite build",
         "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./",
@@ -17,8 +17,11 @@
         "@reduxjs/toolkit": "^1.9.5",
         "async-mutex": "^0.4.0",
         "firebase": "^9.22.1",
+        "googleapis": "^118.0.0",
+        "i18next": "^22.5.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-i18next": "^12.3.1",
         "react-redux": "^8.0.7",
         "sass": "^1.62.1"
     },

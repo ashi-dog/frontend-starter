@@ -7,6 +7,7 @@ import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
 import { postLogin, setCurrentUser, SocialLoginType, useGoogleSignUpMutation } from "./features/auth";
 import { ISocialSignUpReq } from "./features/auth/types/interfaces";
+import { SelectLangs } from "./features/langs";
 import { useAppDispatch } from "./hooks/reduxHooks";
 import { socialLoginHandler } from "./lib/firebase/firebaseAuth";
 
@@ -85,6 +86,7 @@ function App() {
                 </p>
             </div>
             <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
+            <SelectLangs />
             <button onClick={() => handleSocialLogin(SocialLoginType.google)}>Click to Test rtkQuery : </button>
         </>
     );
