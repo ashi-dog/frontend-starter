@@ -1,3 +1,5 @@
+import "./assets/styles/index.scss";
+
 import { BrowserRouter } from "react-router-dom";
 
 import { AllRoutes } from "./routes";
