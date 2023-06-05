@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 
+import VerticalLayout from "@/components/layout/AdminLayout";
 import { Outlet, useRoutes } from "react-router-dom";
 
 import Root from "./Root";
@@ -20,19 +21,17 @@ const LoadComponent = ({ component: Component }: LoadComponentProps) => (
 const AllRoutes = () => {
     return useRoutes([
         { path: "/", element: <Root /> },
+        // public routes
         {
             path: "/",
             children: [
                 { path: "auth", children: [{ path: "login", element: <LoadComponent component={LoginPage} /> }] },
             ],
         },
+        // private
         {
             path: "/",
-            element: (
-                <div>
-                    Private layout <Outlet />
-                </div>
-            ),
+            element: <VerticalLayout />,
             children: [
                 { path: "dashboard", element: <LoadComponent component={OverviewPage} /> },
                 { path: "users", element: <LoadComponent component={UsersPage} /> },
